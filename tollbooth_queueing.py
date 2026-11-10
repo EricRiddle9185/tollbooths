@@ -68,6 +68,7 @@ def plot(drivers, times):
 
 
 drivers, times = simulate(20, [12, 12, 6, 6], 25000, rand_choice)
+# try different vals, mfind justification for values
 
 plot(drivers, times)
 
