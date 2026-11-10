@@ -48,6 +48,9 @@ def simulate(rate_in, rates_out, time_to_sim, driver_decision_func):
 def rand_choice(lanes):
     return np.random.randint(0, len(lanes) )
 
+def shortest_choice(lanes):
+    return np.argmin(lanes)
+
 def plot(drivers, times):
     fig, ax1 = plt.subplots(figsize=(13, 7))
 
@@ -67,7 +70,7 @@ def plot(drivers, times):
     plt.show()
 
 
-drivers, times = simulate(20, [12, 12, 6, 6], 25000, rand_choice)
+drivers, times = simulate(30, [12, 12, 6, 6], 25000, shortest_choice)
 
 plot(drivers, times)
 
